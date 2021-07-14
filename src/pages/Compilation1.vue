@@ -8,10 +8,15 @@
       </p>
     </div>
     <div class="compilation__content">
+      <!-- <ContentBlock v-for="card of cards" :key="card.id" v-bind:card="card" />
       <ContentBlock v-for="card of cards" :key="card.id" v-bind:card="card" />
       <ContentBlock v-for="card of cards" :key="card.id" v-bind:card="card" />
-      <ContentBlock v-for="card of cards" :key="card.id" v-bind:card="card" />
-      <ContentBlock v-for="card of cards" :key="card.id" v-bind:card="card" />
+      <ContentBlock v-for="card of cards" :key="card.id" v-bind:card="card" /> -->
+      <swiper>
+        <swiper-slide v-for="card of cards" :key="card.id">
+          <ContentBlock  v-bind:card="card"/>
+        </swiper-slide>
+      </swiper>
     </div>
   </section>
 </template>
@@ -20,11 +25,15 @@
 import Header from "@/components/header.vue";
 import ContentBlock from "@/components/content-block-pages.vue";
 import data from "@/data/data.json";
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/swiper.scss';
 
 export default {
   components: {
     Header,
     ContentBlock,
+    Swiper,
+    SwiperSlide
   },
   data() {
     return {

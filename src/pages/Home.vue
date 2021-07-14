@@ -18,8 +18,6 @@ import MostProfitable from '@/components/MostProfitable.vue'
 import MostFriendsDay from '@/components/MostFriendsDay.vue'
 import MostFriendsWeek from '@/components/MostFriendsWeek.vue'
 import Navigation from '@/components/navigation.vue'
-// import {Swiper, SwiperSlide} from 'vue-awesome-swiper';
-// import 'swiper/swiper-bundle.css';
 
 export default {
   name: 'Home',
@@ -31,8 +29,6 @@ export default {
     MostFriendsDay,
     MostFriendsWeek,
     Navigation,
-    // Swiper,
-    // SwiperSlide
   }
 }
 </script>
