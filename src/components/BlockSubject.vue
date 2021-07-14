@@ -79,64 +79,7 @@ export default {
         justify-content: space-between;
         overflow: hidden;
     }
-     .video__content{
-        position: relative; 
-        display: flex;
-        margin-right: 1.5px; 
-        width: calc(20% - 1.5px);
-        height: 133px;
-        position: relative;
-        overflow: hidden;
-    }
-    .video__content:nth-last-of-type{
-        margin-right: 0; 
-    }
-    .video__img{
-        max-width: 100%;
-        height: 100%;
-        background-size: cover;
-        object-fit: cover;
-        background-repeat: no-repeat; 
-    }
-    .content__counter{
-        position: absolute;
-        bottom: 7px;
-        left: 7px;
-        display: flex;
-        align-items: center;
-    }
-    .video__counter{
-        color: #fff;
-        font-family: SF Pro Display;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 10px;
-        line-height: 12px;
-        margin: 0;
-        margin-left: 4.6px;
-    }
-    .video__paid{
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        width: 100%;
-        height: 100%;
-        display: none;
-        top: 0;
-        left: 0;
-        justify-content: center;
-        align-items: center;
-    }
-    .video__paid-img{
-        border: 3.5px solid #FFFFFF;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-    }
-    .active{
-        display: flex;
-        position: absolute;
-    }
-    .swiper-slide{
+    .swiper-slide-active{
       display: flex;
     }
 </style>
