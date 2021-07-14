@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id='app'>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import SearchMobile from '@/components/search-mobile.vue'
+// import MostFriends from '@/components/most-friends.vue'
+// import PopularPaid from '@/components/PopularPaid.vue'
+// import MostProfitable from '@/components/MostProfitable.vue'
+// import MostFriendsDay from '@/components/MostFriendsDay.vue'
+// import MostFriendsWeek from '@/components/MostFriendsWeek.vue'
+// import Navigation from '@/components/navigation.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // SearchMobile,
+    // MostFriends,
+    // PopularPaid,
+    // MostProfitable,
+    // MostFriendsDay,
+    // MostFriendsWeek,
+    // Navigation
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app{
+    margin: 0;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+  }
 </style>
