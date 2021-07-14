@@ -7,8 +7,8 @@
     </div>
     <div class="compilation__content">
       <swiper>
-        <swiper-slide v-for="card of cards" :key="card.id">
-          <ContentBlock  v-bind:card="card"/>
+        <swiper-slide >
+          <ContentBlock v-for="card of cards" :key="card.id" v-bind:card="card"/>
         </swiper-slide>
       </swiper>
     </div>
