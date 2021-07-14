@@ -2,29 +2,33 @@
   <section class="compilation">
     <Header />
     <div class="compilation__about">
-      <h2 class="compilation__title">Популярные среди платных ☄️</h2>
-      <p class="compilation__text">
-        Платные видео с наибольшим количеством просмотров
-      </p>
+      <h2 class="compilation__title">{{block.title}}</h2>
+      <p class="compilation__text">{{block.text}}</p>
     </div>
     <div class="compilation__content">
-      <ContentBlock v-for="card of cards" :key="card.id" v-bind:card="card" />
-      <ContentBlock v-for="card of cards" :key="card.id" v-bind:card="card" />
-      <ContentBlock v-for="card of cards" :key="card.id" v-bind:card="card" />
-      <ContentBlock v-for="card of cards" :key="card.id" v-bind:card="card" />
+      <swiper>
+        <swiper-slide v-for="card of cards" :key="card.id">
+          <ContentBlock  v-bind:card="card"/>
+        </swiper-slide>
+      </swiper>
     </div>
   </section>
 </template>
 
 <script>
-import Header from "@/components/header.vue";
-import ContentBlock from "@/components/content-block-pages.vue";
+import Header from "@/components/Header.vue";
+import ContentBlock from "@/components/ContentBlockPages.vue";
 import data from "@/data/data.json";
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.min.css'
 
 export default {
+  props: ['block'],
   components: {
     Header,
     ContentBlock,
+    Swiper,
+    SwiperSlide
   },
   data() {
     return {
@@ -46,7 +50,8 @@ section {
   margin: 0 auto;
 }
 .compilation__about {
-  padding: 69px 23px 30px;
+  margin: 0 auto;
+  padding: 62px 23px 30px;
   max-width: 554px;
   width: calc(100% - 46px);
 }
@@ -57,7 +62,7 @@ section {
   font-size: 18px;
   line-height: 21px;
   color: #292941;
-  margin: 0 0 10px;
+  margin: 0 0 11px;
 }
 
 .compilation__text {
@@ -68,7 +73,7 @@ section {
   line-height: 135%;
   color: #292941;
   opacity: 0.5;
-  margin: 0 auto;
+  margin: 0;
 }
 .compilation__content {
   display: flex;
@@ -77,4 +82,7 @@ section {
   width: 100%;
   margin: 0 auto;
 }
+.swiper-slide{
+      display: flex;
+    }
 </style>

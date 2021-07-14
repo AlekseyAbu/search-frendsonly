@@ -1,34 +1,45 @@
  <template>
   <body>
     <SearchMobile />
-    <MostFriends />
-    <PopularPaid />
-    <MostProfitable />
-    <MostFriendsDay />
-    <MostFriendsWeek />
-    <!-- <Navigation /> -->
+    <BlockSubject 
+      v-for="block in visibleList"
+      :key="block.id"
+      v-bind:block="block"
+    />
   </body>
 </template>
 
 <script>
-import SearchMobile from '@/components/search-mobile.vue'
-import MostFriends from '@/components/most-friends.vue'
-import PopularPaid from '@/components/PopularPaid.vue'
-import MostProfitable from '@/components/MostProfitable.vue'
-import MostFriendsDay from '@/components/MostFriendsDay.vue'
-import MostFriendsWeek from '@/components/MostFriendsWeek.vue'
-import Navigation from '@/components/navigation.vue'
+import SearchMobile from '@/components/SearchMobile.vue'
+import Navigation from '@/components/Navigation.vue'
+import CardData from '@/data/blocks.json'
+import BlockSubject from '@/components/BlockSubject.vue'
 
 export default {
   name: 'Home',
   components: {
     SearchMobile,
-    MostFriends,
-    PopularPaid,
-    MostProfitable,
-    MostFriendsDay,
-    MostFriendsWeek,
     Navigation,
+    BlockSubject
+  },
+  data(){
+    return{
+      CardData: CardData,
+    }
+  },
+  computed: {
+    visibleList: function(){
+      const arr =  this.CardData.map(item => {
+        if(item.counter >= 1000000){
+          item.counter = ((item.counter/1000000).toFixed(1) + 'M')
+        }
+        if(item.counter <= 1000000){
+          item.counter = ((item.counter/100000).toFixed(0) + 'K')
+        }
+        return item
+      })
+      return arr
+    }
   }
 }
 </script>
