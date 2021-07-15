@@ -2,7 +2,7 @@
   <section class="friends">
     <div class="block">
       <div class="header">
-        <router-link class="title" :to="block.path">{{block.title}}</router-link>
+       <router-link class="title" :to="{path: `/search/${block.path}`}">{{block.title}}</router-link>
         <p class="counter">{{block.counter}}</p>
       </div>
       <div class="content">
@@ -36,6 +36,12 @@ export default {
   }
 };
 </script>
+
+<style>
+.swiper-container{
+    width: 100%;
+}
+</style>
 
 <style scoped>
     .friends{
