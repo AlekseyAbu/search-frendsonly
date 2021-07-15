@@ -1,19 +1,15 @@
  <template>
   <body>
     <SearchMobile />
-    <BlockSubject 
-      v-for="block in visibleList"
-      :key="block.id"
-      v-bind:block="block"
-    />
+    <BlockSubject v-for="block in visibleList" :key="block.id" v-bind:block="block"/>
   </body>
 </template>
 
 <script>
-import SearchMobile from '@/components/SearchMobile.vue'
-import Navigation from '@/components/Navigation.vue'
-import CardData from '@/data/blocks.json'
-import BlockSubject from '@/components/BlockSubject.vue'
+import SearchMobile from '../components/SearchMobile.vue'
+import Navigation from '../components/Navigation.vue'
+import CardData from '../data/blocks.json'
+import BlockSubject from '../components/BlockSubject.vue'
 
 export default {
   name: 'Home',

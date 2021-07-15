@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import ContentBlock from "@/components/ContentBlockPages.vue";
-import data from "@/data/data.json";
+import Header from "../components/Header.vue";
+import ContentBlock from "../components/ContentBlockPages.vue";
+import data from "../data/data.json";
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.min.css'
 

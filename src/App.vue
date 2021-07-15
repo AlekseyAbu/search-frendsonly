@@ -5,25 +5,8 @@
 </template>
 
 <script>
-// import SearchMobile from '@/components/search-mobile.vue'
-// import MostFriends from '@/components/most-friends.vue'
-// import PopularPaid from '@/components/PopularPaid.vue'
-// import MostProfitable from '@/components/MostProfitable.vue'
-// import MostFriendsDay from '@/components/MostFriendsDay.vue'
-// import MostFriendsWeek from '@/components/MostFriendsWeek.vue'
-// import Navigation from '@/components/navigation.vue'
-
 export default {
   name: 'App',
-  components: {
-    // SearchMobile,
-    // MostFriends,
-    // PopularPaid,
-    // MostProfitable,
-    // MostFriendsDay,
-    // MostFriendsWeek,
-    // Navigation
-  }
 }
 </script>
 
